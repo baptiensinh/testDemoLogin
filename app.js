@@ -24,10 +24,10 @@ XuLy = async function (req, res){
      res.render("index1");
     }
   else {
-     
+    if (userId!=undefined){
       ten = req.session.user.TenDN;
       thoat = "<a href=/?thoat=1>exit</a>"
-      res.render("index3",{ ten:ten,thoat:thoat});
+      res.render("index3",{ ten:ten,thoat:thoat});}
     };
 
 };
@@ -36,14 +36,14 @@ app.post("/dangnhap", async function (req, res) {
   var email = req.body.email;
   var matkhau = req.body.pass;
   var record = await csdl.Login(email, matkhau);
+  
   if (record == 0) {
-  req.session.user = "";
-
-}
-else{
-  req.session.user = record;
-}
-await XuLy(req,res);
+    req.session.user = undefined;
+  }
+  else{
+    req.session.user = record;
+  }
+  await XuLy(req,res);
 });
 
 app.post("/dangky", async function (req, res) {
