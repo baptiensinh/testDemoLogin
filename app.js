@@ -64,7 +64,9 @@ if (record == 0)
 app.get("/index2", async function(req,res){
     res.render("index2");
 });
-
+app.get("/chat", async function(req,res){
+  res.render("index");
+});
 // app.get("/index3", async function(req,res){
 //   res.render("index3");
 // });
