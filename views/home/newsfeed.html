@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NewsFeed</title>
+    <link rel="stylesheet" href="css/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/hover.css">
+    <script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!--TODO:This post-->
+    <div class="container pt-3">
+        <div class="row">
+            <div class="col-md-8 col-sm-12 mx-auto">
+                <div class="card transform-on-hover w-100">
+                    <div class="card-header bg-transparent">
+                        <img class="box-icon float-left" src="images/user.jpg" alt="" sizes="" srcset="">
+                        <a class="d-inline-flex p-2 ds-username-title" href="#">Username</a>
+                        <img class="d-inline-flex float-right p-2" src="images/more.png" alt="" srcset=""
+                            data-toggle="modal" data-target="#viewMore">
+                    </div>
+                    <div class="card-body bg-transparent">
+                        <img class="card-img-top img-fluid" src="images/Images/014.jpg" alt="Card image cap">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <img id="love" src="images/hearts.png"> 121
+                                    </div>
+                                    <!-- <div class="col-2">
+                                        <img id="love" src="images/chat.png" data-toggle="modal"
+                                            data-target="#viewComment">
+                                    </div> -->
+                                    <div class="col-2">
+                                        <img id="love" src="images/paper-plane.png" data-toggle="modal"
+                                            data-target="#viewShare">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">User captions for this</li>
+
+                        </ul>
+                    </div>
+                </div>
+                <!--TODO:THIS COMMENT DISQUE-->
+                <div id="disqus_thread"></div>
+                <script>
+
+                    /**
+                    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                    /*
+                    var disqus_config = function () {
+                    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    };
+                    */
+                    (function () { // DON'T EDIT BELOW THIS LINE
+                        var d = document, s = d.createElement('script');
+                        s.src = 'https://127-0-0-1-5500.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments
+                        powered by
+                        Disqus.</a></noscript>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <!--TODO: reconned-->
+                <div class="row ds-box">
+                    <div class="col-md-5 col-sm-12 dropdown">
+                        <img class="ds-thum" src="images/Images/41382457_146220186311853_4229486198835380224_n.jpg"
+                            alt="" srcset="">
+                        <div class="dropdown-content">
+                            <img class="ds-thum-ho"
+                                src="images/Images/41382457_146220186311853_4229486198835380224_n.jpg"
+                                alt="Cinque Terre">
+                            <div class="desc">Beautiful Cinque Terre</div>
+                        </div>
+                    </div>
+                    <div class="col-md-7 col-sm-12">
+                        <div class="d-flex text-right">title name fileaaa</div>
+                        <div class="d-flex text-right">Username</div>
+                        <div class="d-flex text-right">views</div>
+                    </div>
+                </div>
+                <div class="d-flex p-2"></div>
+                <div class="row ds-box">
+                    <div class="col-md-5 col-sm-12 dropdown">
+                        <img class="ds-thum" src="images/Images/36869222_804435913084696_1261595859506692096_n.jpg"
+                            alt="" srcset="">
+                        <div class="dropdown-content">
+                            <img class="ds-thum-ho"
+                                src="images/Images/36869222_804435913084696_1261595859506692096_n.jpg"
+                                alt="Cinque Terre">
+                            <div class="desc">Beautiful Cinque Terre</div>
+                        </div>
+                    </div>
+                    <div class="col-md-7 col-sm-12">
+                        <div class="d-flex text-right">title name fileaaa</div>
+                        <div class="d-flex text-right">Username</div>
+                        <div class="d-flex text-right">views</div>
+                    </div>
+                </div>
+                <div class="d-flex p-2"></div>
+                <div class="row ds-box">
+                    <div class="col-md-5 col-sm-12 dropdown">
+                        <img class="ds-thum" src="images/Images/37785770_1873636492693084_3196543214072889344_n.jpg"
+                            alt="" srcset="">
+                        <div class="dropdown-content">
+                            <img class="ds-thum-ho"
+                                src="images/Images/37785770_1873636492693084_3196543214072889344_n.jpg"
+                                alt="Cinque Terre">
+                            <div class="desc">Beautiful Cinque Terre</div>
+                        </div>
+                    </div>
+                    <div class="col-md-7 col-sm-12">
+                        <div class="d-flex text-right">title name fileaaa</div>
+                        <div class="d-flex text-right">Username</div>
+                        <div class="d-flex text-right">views</div>
+                    </div>
+                </div>
+                <div class="d-flex p-2"></div>
+                <div class="row ds-box">
+                    <div class="col-md-5 col-sm-12 dropdown">
+                        <img class="ds-thum" src="images/Images/38122075_2473333659559664_5135070793247490048_n.jpg"
+                            alt="" srcset="">
+                        <div class="dropdown-content">
+                            <img class="ds-thum-ho"
+                                src="images/Images/38122075_2473333659559664_5135070793247490048_n.jpg"
+                                alt="Cinque Terre">
+                            <div class="desc">Beautiful Cinque Terre</div>
+                        </div>
+                    </div>
+                    <div class="col-md-7 col-sm-12">
+                        <div class="d-flex text-right">title name fileaaa</div>
+                        <div class="d-flex text-right">Username</div>
+                        <div class="d-flex text-right">views</div>
+                    </div>
+                </div>
+                <div class="d-flex p-2"></div>
+                <div class="row ds-box">
+                    <div class="col-md-5 col-sm-12 dropdown">
+                        <img class="ds-thum" src="images/Images/38286842_2208205976128564_5196688983941185536_n.jpg"
+                            alt="" srcset="">
+                        <div class="dropdown-content">
+                            <img class="ds-thum-ho"
+                                src="images/Images/38286842_2208205976128564_5196688983941185536_n.jpg"
+                                alt="Cinque Terre">
+                            <div class="desc">Beautiful Cinque Terre</div>
+                        </div>
+                    </div>
+                    <div class="col-md-7 col-sm-12">
+                        <div class="d-flex text-right">title name fileaaa</div>
+                        <div class="d-flex text-right">Username</div>
+                        <div class="d-flex text-right">views</div>
+                    </div>
+                </div>
+                <div class="d-flex p-2"></div>
+                <div class="row ds-box">
+                    <div class="col-md-5 col-sm-12 dropdown">
+                        <img class="ds-thum" src="images/Images/40276239_2015686185117274_7806142668668403712_n.jpg"
+                            alt="" srcset="">
+                        <div class="dropdown-content">
+                            <img class="ds-thum-ho"
+                                src="images/Images/40276239_2015686185117274_7806142668668403712_n.jpg"
+                                alt="Cinque Terre">
+                            <div class="desc">Beautiful Cinque Terre</div>
+                        </div>
+                    </div>
+                    <div class="col-md-7 col-sm-12">
+                        <div class="d-flex text-right">title name fileaaa</div>
+                        <div class="d-flex text-right">Username</div>
+                        <div class="d-flex text-right">views</div>
+                    </div>
+                </div>
+                <div class="d-flex p-2"></div>
+                <div class="row ds-box">
+                    <div class="col-md-5 col-sm-12 dropdown">
+                        <img class="ds-thum" src="images/Images/40392923_1088291627987082_6888239227583070208_n.jpg"
+                            alt="" srcset="">
+                        <div class="dropdown-content">
+                            <img class="ds-thum-ho"
+                                src="images/Images/40392923_1088291627987082_6888239227583070208_n.jpg"
+                                alt="Cinque Terre">
+                            <div class="desc">Beautiful Cinque Terre</div>
+                        </div>
+                    </div>
+                    <div class="col-md-7 col-sm-12">
+                        <div class="d-flex text-right">title name fileaaa</div>
+                        <div class="d-flex text-right">Username</div>
+                        <div class="d-flex text-right">views</div>
+                    </div>
+                </div>
+                <div class="d-flex p-2"></div>
+                <div class="row ds-box">
+                    <div class="col-md-5 col-sm-12 dropdown">
+                        <img class="ds-thum" src="images/Images/40442042_1066691580147412_7431571904995000320_n.jpg"
+                            alt="" srcset="">
+                        <div class="dropdown-content">
+                            <img class="ds-thum-ho"
+                                src="images/Images/40442042_1066691580147412_7431571904995000320_n.jpg"
+                                alt="Cinque Terre">
+                            <div class="desc">Beautiful Cinque Terre</div>
+                        </div>
+                    </div>
+                    <div class="col-md-7 col-sm-12">
+                        <div class="d-flex text-right">title name fileaaa</div>
+                        <div class="d-flex text-right">Username</div>
+                        <div class="d-flex text-right">views</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--TODO: This view more-->
+    <!-- Modal -->
+    <div class="modal fade" id="viewMore" tabindex="-1" role="dialog" aria-labelledby="viewMoreCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <ul class="list-group list-group-flush text-center">
+                        <li class="ds-hover-modal list-group-item">
+                            Report photo
+                        </li>
+                        <li class="ds-hover-modal list-group-item">
+                            Go to Post
+                        </li>
+                        <li class="ds-hover-modal list-group-item">Copy url</li>
+                        <li class="ds-hover-modal list-group-item">Download
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--TODO: This share-->
+    <!-- Modal -->
+    <div class="modal fade" id="viewShare" tabindex="-1" role="dialog" aria-labelledby="viewShareCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <ul class="list-group list-group-flush text-left">
+                        <li class="ds-hover-modal list-group-item">
+                            <img src="images/facebook.png" alt="" srcset="">
+                            Share in Facebook
+                        </li>
+                        <li class="ds-hover-modal list-group-item">
+                            <img src="images/twitter.png" alt="" srcset="">
+                            Share in Twitter
+                        </li>
+                        <li class="ds-hover-modal list-group-item">
+                            <img src="images/link-symbol.png" alt="" srcset="">
+                            Copy link address</li>
+                        <li class="ds-hover-modal list-group-item">
+                            <img src="images/verified.png" alt="" srcset="">
+                            Save
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--TODO: This comment-->
+    <!-- Modal -->
+    <!-- <div class="modal fade" id="viewComment" tabindex="-1" role="dialog" aria-labelledby="viewCommentCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6 d-inline-flex">
+                                <!--TODO: this card imageS--
+                                <div class="card transform-on-hover w-100">
+                                    <div class="card-header Linear-Gradient-nav">
+                                        <img class="box-icon float-left" src="images/user.jpg" alt="" sizes=""
+                                            srcset="">
+                                        <a class="d-inline-flex p-2 ds-username-title" href="#">Username</a>
+                                    </div>
+                                    <div class="card-body bg-transparent">
+                                        <img class="card-img-top img-fluid" src="images/Images/014.jpg"
+                                            alt="Card image cap">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <!--TODO:THIS COMMENT DISQUE--
+                                <div id="disqus_thread"></div>
+                                <script>
+
+                                    /**
+                                    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                                    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                                    /*
+                                    var disqus_config = function () {
+                                    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                                    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                                    };
+                                    */
+                                    (function () { // DON'T EDIT BELOW THIS LINE
+                                        var d = document, s = d.createElement('script');
+                                        s.src = 'https://127-0-0-1-5500.disqus.com/embed.js';
+                                        s.setAttribute('data-timestamp', +new Date());
+                                        (d.head || d.body).appendChild(s);
+                                    })();
+                                </script>
+                                <noscript>Please enable JavaScript to view the <a
+                                        href="https://disqus.com/?ref_noscript">comments powered by
+                                        Disqus.</a></noscript>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/owl/owl.carousel.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/owl/owl.js"></script>
+    <script id="dsq-count-scr" src="//127-0-0-1-5500.disqus.com/count.js" async></script>
+</body>
+
+</html>

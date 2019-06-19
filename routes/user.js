@@ -158,5 +158,18 @@ exports.upload = function (req, res) {
     }
     //TODO: just for POST
 }
+exports.message = function(req, res)
+{
+    var userId = req.session.userId;
+    var user= req.session.username;
+
+    if (userId == null) {
+        res.redirect("/login");
+        return;
+    }
+   else{
+    res.render("chat/chat.ejs", {user:user });
+   }
+}
 
 //TODO: change password not here - > goto file server

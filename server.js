@@ -3,18 +3,21 @@ var express = require("express"),
   routes = require("./routes/index"),
   multer = require("multer"),
   path = require("path");
+  http = require('http');
 
 var session = require("express-session");
 var app = express();
+var server = http.createServer(app);
 var bodyParser = require("body-parser");
 var mysql = require("mysql");
 var ejsEngine = require("ejs-locals");
 app.engine("ejs", ejsEngine);
 app.set("view engine", "ejs");
+var io = require('socket.io').listen(server);
 // ! global
 
 var hostname = "localhost";
-var port = 9999;
+var port = 8888;
 
 // ! mysql
 var connection = mysql.createConnection({
@@ -109,6 +112,52 @@ app.get("/home/logout", user.logout); // ? call for logout
 app.get("/home", user.home); // ? call for login
 app.get("/home-page", user.homenotlogin); // ? call for without login
 app.get("/upload", user.upload); // ? call for page upload
+app.get("/messenger",user.message);// ? call for message page
+
+//socket io
+var onlineUsers=[];
+io.on('connection', function(socket) {
+
+     console.log('a user connected');
+
+  socket.on('user name', function(user, callback) {
+      var temp = 0;
+      onlineUsers.push({
+          profileName: user,
+          profileId: socket.id,
+          counter: temp
+      })
+
+      // console.log(userName);
+      console.log(onlineUsers);
+
+      io.sockets.emit('connectedUsers', onlineUsers);
+
+  });
+
+  socket.on('disconnect', function() {
+      var i = 0;
+      while (i < onlineUsers.length) {
+          if (onlineUsers[i].profileId == socket.id) {
+              break;
+          }
+          i++;
+      }
+      console.log(socket.id + 'disconnect');
+
+      onlineUsers.splice(i, 1);
+      io.sockets.emit('connectedUsers', onlineUsers);
+      console.log('user disconnected');
+  });
+
+  socket.on('chatting', function(message, sender, receiver) {
+
+      socket.to(receiver).emit('reciverPeer', message, socket.id, receiver);
+      socket.emit('senderPeer', message, socket.id, receiver);
+  })
+
+});
+
 
 // ? call for upload image
 app.post("/upload", (req, res) => {
@@ -311,6 +360,13 @@ app.get("/p/:id", async (req, res) => {
   //   username_nav: username_nav,
   //   id: id
   // });
+  res.send(JSON.stringify( {
+    data: result,
+    username_show: username_show,
+    username_nav: username_nav,
+    change_avatar: change_avatar,
+    id: id
+  }))
   //res.html(id);
 });
 
@@ -505,7 +561,9 @@ app.get("/test/:id", (req, res) => {
     data: id
   });
 });
+// socket io
+
 // ! Middleware
-app.listen(`${port}`, () => {
+server.listen(`${port}`, () => {
   console.log(`App running in http://${hostname}:${port}`);
 });
